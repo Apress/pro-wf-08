@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a703d42-aa2f-4a95-a03c-fd0c9cd91992" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ProWF/MathServiceWorkflow.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MathServiceWorkflow.wsdl" MetadataType="Wsdl" ID="bc2d4872-e58f-4ab3-a695-5429871e83d4" SourceId="1" SourceUrl="http://beethoven/ProWF/MathServiceWorkflow.svc?wsdl" />
+    <MetadataFile FileName="MathServiceWorkflow1.wsdl" MetadataType="Wsdl" ID="15867e8e-3317-4825-b394-9b83a51846a5" SourceId="1" SourceUrl="http://beethoven/ProWF/MathServiceWorkflow.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="MathServiceWorkflow.disco" MetadataType="Disco" ID="8bd04423-ad33-48d9-a947-c726c67245ec" SourceId="1" SourceUrl="http://beethoven/ProWF/MathServiceWorkflow.svc?disco" />
+    <MetadataFile FileName="MathServiceWorkflow.xsd" MetadataType="Schema" ID="c8653f1b-b867-4f37-8da3-09bb5becfe24" SourceId="1" SourceUrl="http://beethoven/ProWF/MathServiceWorkflow.svc?xsd=xsd1" />
+    <MetadataFile FileName="MathServiceWorkflow1.xsd" MetadataType="Schema" ID="c3db8c58-dfe8-46b2-b880-33f26d352520" SourceId="1" SourceUrl="http://beethoven/ProWF/MathServiceWorkflow.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,146 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA3F3830-B5FC-48F5-BB48-1C63F689773D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharedWorkflows</RootNamespace>
+    <AssemblyName>SharedWorkflows</AssemblyName>
+    <ProjectTypeGuids>{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Workflow.Activities">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.ComponentModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.Runtime">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.WorkflowServices">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LongRunningActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LongRunningActivity.Designer.cs">
+      <DependentUpon>LongRunningActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LongRunningWorkflow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LongRunningWorkflow.Designer.cs">
+      <DependentUpon>LongRunningWorkflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkResponse.cs" />
+    <Compile Include="ILongRunningServices.cs" />
+    <Compile Include="LongRunningServices.cs" />
+    <Compile Include="PriorityExtenderProvider.cs" />
+    <Compile Include="SequencePriorityActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SequencePriorityActivity.Designer.cs">
+      <DependentUpon>SequencePriorityActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProWFSequenceCancelWorkflow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProWFSequenceCancelWorkflow.Designer.cs">
+      <DependentUpon>ProWFSequenceCancelWorkflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FitForPurposeActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FitForPurposeActivity.Designer.cs">
+      <DependentUpon>FitForPurposeActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FitForPurposeWorkflow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FitForPurposeWorkflow.Designer.cs">
+      <DependentUpon>FitForPurposeWorkflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ProWFSequenceActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProWFSequenceActivity.Designer.cs">
+      <DependentUpon>ProWFSequenceActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProWFSequenceWorkflow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProWFSequenceWorkflow.Designer.cs">
+      <DependentUpon>ProWFSequenceWorkflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SequencePriorityActivityDesigner.cs" />
+    <Compile Include="SequencePriorityWorkflow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SequencePriorityWorkflow.Designer.cs">
+      <DependentUpon>SequencePriorityWorkflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkRequest.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SequencePriorityWorkflow.resx">
+      <DependentUpon>SequencePriorityWorkflow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Windows Workflow Foundation\v3.5\Workflow.Targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetName)$(TargetExt)"  "$(SolutionDir)\bin"
+if EXIST "$(TargetDir)$(TargetName).pdb" copy "$(TargetDir)$(TargetName).pdb"  "$(SolutionDir)\bin"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

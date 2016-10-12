@@ -1,0 +1,61 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Name="MathServiceStatefulWorkflow" Location="30, 30" Size="963, 665" AutoSizeMargin="16, 24" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="StartedState" SourceConnectionIndex="0" TargetConnectionEdge="Top" SetStateName="setStateActivity1" SourceStateName="WaitingForStartupState" SourceConnectionEdge="Right" TargetActivity="StartedState" SourceActivity="WaitingForStartupState" EventHandlerName="eventStartWorkflow">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="199" Y="110" />
+				<ns0:Point X="246" Y="110" />
+				<ns0:Point X="246" Y="165" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="CompletedState" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="setStateActivity2" SourceStateName="StartedState" SourceConnectionEdge="Right" TargetActivity="CompletedState" SourceActivity="StartedState" EventHandlerName="eventStopWorkflow">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="307" Y="254" />
+				<ns0:Point X="380" Y="254" />
+				<ns0:Point X="380" Y="284" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Name="WaitingForStartupState" Location="56, 69" Size="160, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="190, 203" Name="eventStartWorkflow" Location="64, 100">
+					<EventDrivenDesigner.Designers>
+						<ns1:ReceiveActivityDesigner Size="170, 122" Name="receiveStartWorkflow" Location="74, 162" xmlns:ns1="clr-namespace:System.Workflow.Activities;Assembly=System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+							<ns1:ReceiveActivityDesigner.Designers>
+								<SetStateDesigner Size="130, 41" Name="setStateActivity1" Location="94, 224" />
+							</ns1:ReceiveActivityDesigner.Designers>
+						</ns1:ReceiveActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="CompletedState" Location="300, 284" Size="160, 80" AutoSizeMargin="16, 24" />
+		<StateDesigner Name="StartedState" Location="166, 165" Size="160, 107" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="190, 203" Name="eventDivideNumbers" Location="174, 196">
+					<EventDrivenDesigner.Designers>
+						<ns1:ReceiveActivityDesigner Size="170, 122" Name="receiveDivideNumbers" Location="184, 258" xmlns:ns1="clr-namespace:System.Workflow.Activities;Assembly=System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+							<ns1:ReceiveActivityDesigner.Designers>
+								<CodeDesigner Size="130, 41" Name="codeDivideNumbers" Location="204, 320" />
+							</ns1:ReceiveActivityDesigner.Designers>
+						</ns1:ReceiveActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="190, 190" Name="eventGetLastQuotient" Location="174, 220">
+					<EventDrivenDesigner.Designers>
+						<ns1:ReceiveActivityDesigner Size="170, 109" Name="receiveGetLastQuotient" Location="184, 282" xmlns:ns1="clr-namespace:System.Workflow.Activities;Assembly=System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="190, 203" Name="eventStopWorkflow" Location="174, 244">
+					<EventDrivenDesigner.Designers>
+						<ns1:ReceiveActivityDesigner Size="170, 122" Name="receiveStopWorkflow" Location="184, 306" xmlns:ns1="clr-namespace:System.Workflow.Activities;Assembly=System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+							<ns1:ReceiveActivityDesigner.Designers>
+								<SetStateDesigner Size="130, 41" Name="setStateActivity2" Location="204, 368" />
+							</ns1:ReceiveActivityDesigner.Designers>
+						</ns1:ReceiveActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+</StateMachineWorkflowDesigner>

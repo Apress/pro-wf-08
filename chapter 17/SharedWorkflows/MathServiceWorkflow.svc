@@ -1,0 +1,1 @@
+﻿<%@ServiceHost language=c# Debug="true" Service="SharedWorkflows.MathServiceWorkflow" Factory="System.ServiceModel.Activation.WorkflowServiceHostFactory" %>

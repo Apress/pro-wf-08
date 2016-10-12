@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d9a42a68-57c2-43f5-9d24-ab95d8b2c2dd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8731/Design_Time_Addresses/SharedWorkflows/MathServiceStatefulWorkflow/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6f05ec35-303b-4b9d-81f1-500d7edcf070" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/SharedWorkflows/MathServiceStatefulWorkflow/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="dc64f64c-bb17-4e8a-8df4-1bb25e764c0a" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/SharedWorkflows/MathServiceStatefulWorkflow/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6cdd182e-0181-4404-aea7-4cb87e34693e" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/SharedWorkflows/MathServiceStatefulWorkflow/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
